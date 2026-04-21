@@ -1,0 +1,35 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Word Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <h1 id="title" style="margin:0 0 10px 0; font-size:20px;">Live Word Counter</h1>
+
+    <textarea id="input" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="meta" aria-live="polite" aria-atomic="true">
+      <div class="item" id="words">Words: 0</div>
+      <div class="item" id="chars">Characters (with spaces): 0</div>
+      <div class="item" id="chars-nospace">Characters (no spaces): 0</div>
+      <div class="item" id="reading-time">Reading time: 0 min</div>
+    </div>
+
+    <div class="controls">
+      <button id="clear">Clear</button>
+      <button id="copy" class="secondary">Copy text</button>
+      <button id="select" class="secondary">Select all</button>
+      <div style="flex:1"></div>
+      <div style="color:var(--muted); font-size:13px">Counts update as you type</div>
+    </div>
+    <small class="hint">Tip: the word count treats sequences separated by whitespace as words. Extra spaces and new lines are ignored.</small>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
